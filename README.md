@@ -13,38 +13,36 @@ REQUIRED HARDWARE
 
 THE DANCINGULARITY is controlled by 9 DDR dance mats, specifically XBox 360 DDR dance mats. Due to these controller requirements, it must be run in Linux using the xboxdrv controller driver (http://pingus.seul.org/~grumbel/xboxdrv/). Create a config file with the following:
 
-`
-[xboxdrv]
-#1
-dpad-as-button=true
-#2
-next-controller=true
-dpad-as-button=true
-#3
-next-controller=true
-dpad-as-button=true
-#4
-next-controller=true
-dpad-as-button=true
-#5
-next-controller=true
-dpad-as-button=true
-#6
-next-controller=true
-dpad-as-button=true
-#7
-next-controller=true
-dpad-as-button=true
-#8
-next-controller=true
-dpad-as-button=true
-#9
-next-controller=true
-dpad-as-button=true
+	[xboxdrv]
+	#1
+	dpad-as-button=true
+	#2
+	next-controller=true
+	dpad-as-button=true
+	#3
+	next-controller=true
+	dpad-as-button=true
+	#4
+	next-controller=true
+	dpad-as-button=true
+	#5
+	next-controller=true
+	dpad-as-button=true
+	#6
+	next-controller=true
+	dpad-as-button=true
+	#7
+	next-controller=true
+	dpad-as-button=true
+	#8
+	next-controller=true
+	dpad-as-button=true
+	#9
+	next-controller=true
+	dpad-as-button=true
 
-[xboxdrv-daemon]
-dbus=disabled
-`
+	[xboxdrv-daemon]
+	dbus=disabled
 
 And then before launcing THE DANCINGULARITY, run this from a terminal: 
 
