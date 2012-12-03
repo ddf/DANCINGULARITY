@@ -46,7 +46,7 @@ THE DANCINGULARITY is controlled by 9 DDR dance mats, specifically XBox 360 DDR 
 
 And then before launcing THE DANCINGULARITY, run this from a terminal: 
 
-sudo xboxdrv --daemon -d --config YOUR_CONFIG_FILE_NAME
+	sudo xboxdrv --daemon -d --config YOUR_CONFIG_FILE_NAME
 
 If you do not run the driver, the xpad driver included in Linux will probably see the pads, but they will not be mapped correctly. If you don't have dance mats and would like to run THE DANCINGULARITY in a non-interactive mode, then you need not start the driver. If THE DANCINGULARITY does not find exactly 9 controllers, it will go into "auto-play" mode and simulate people stepping on the buttons.
 
