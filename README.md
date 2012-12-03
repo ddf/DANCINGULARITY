@@ -8,6 +8,7 @@ REQUIRED LIBRARIES
 * GLGraphics (http://glgraphics.sourceforge.net/)
 * OCD (http://gdsstudios.com/processing/libraries/ocd/)
 * proCONTROLL (http://creativecomputing.cc/p5libs/procontroll/)
+* physics (http://murderandcreate.com/physics/)
 
 REQUIRED HARDWARE
 
