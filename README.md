@@ -13,6 +13,7 @@ REQUIRED HARDWARE
 
 THE DANCINGULARITY is controlled by 9 DDR dance mats, specifically XBox 360 DDR dance mats. Due to these controller requirements, it must be run in Linux using the xboxdrv controller driver (http://pingus.seul.org/~grumbel/xboxdrv/). Create a config file with the following:
 
+`<code>`
 [xboxdrv]
 #1
 dpad-as-button=true
@@ -43,6 +44,7 @@ dpad-as-button=true
 
 [xboxdrv-daemon]
 dbus=disabled
+`</code>`
 
 And then before launcing THE DANCINGULARITY, run this from a terminal: 
 
