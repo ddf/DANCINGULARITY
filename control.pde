@@ -182,6 +182,11 @@ void keyPressed()
     key = 0;
   }
   
+  if ( key == 't' )
+  {
+    playVFX( new PVector(0,0,0) );
+  }
+  
   if ( key == '>' && !DANCINGULARITY_ENABLED )
   {
     MAT_BUILDUP = !MAT_BUILDUP;

@@ -1,3 +1,4 @@
+import traer.physics.*;
 import processing.opengl.*;
 import codeanticode.glgraphics.*;
 import damkjer.ocd.*;
@@ -53,6 +54,7 @@ void setup()
   size( screenWidth, screenHeight, GLConstants.GLGRAPHICS );
   
   setupControls();
+  setupVFX();
   
   numberFont  = createFont( "Arial", 12 );
   messageFont = loadFont("Futura-Medium.vlw");
@@ -193,6 +195,7 @@ void draw()
   }
   
   updateBackground( dt );
+  updateVFX();
 
   float totalHeat = 0;
   for( int i = 0; i < theMats.length; ++i )
@@ -240,6 +243,8 @@ void draw()
     offscreen.colorMode( HSB, 360, 100, 100 );
     offscreen.background( globalBackgroundHue, globalBackgroundSat, globalBackgroundFlash * 100 );
     offscreen.lights();
+    offscreen.setDefaultBlend();
+    offscreen.hint( ENABLE_DEPTH_TEST );
     
     renderBackground( offscreen );
     
@@ -280,6 +285,8 @@ void draw()
         drawBigGrid();
       }
     }
+    
+    drawVFX( offscreen );
     
     offscreen.popMatrix();
   }

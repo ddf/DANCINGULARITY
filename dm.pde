@@ -125,17 +125,30 @@ class DanceMat
         break;
       }
       
+      PVector vfxPos = PVector.add( DanceMat.this.pos, pos );
+      
       // heat map
       if ( MAT_BUILDUP )
       {
         mHeat += MAT_BUTTON_HEAT_INCREMENT*2;
+        
+        vfxPos.z = 50;
+        playVFX( vfxPos );
       }
       else
       {
         mHeat     = constrain( mHeat + MAT_BUTTON_HEAT_INCREMENT, 0, 1 );
+        mFromHeight = mHeight = map( mHeat, 0, 1, MAT_BUTTON_MIN_HEIGHT, MAT_BUTTON_MAX_HEIGHT );
+        
+        vfxPos.z = mHeight + 10;
       }
-      mFromHeight = mHeight = map( mHeat, 0, 1, MAT_BUTTON_MIN_HEIGHT, MAT_BUTTON_MAX_HEIGHT );
+      
       lastPress = millis();
+         
+//      if ( !DANCINGULARITY_ENABLED )
+//      {  
+//        playVFX( vfxPos );
+//      }
     }
     
     public float heat() { return mHeat; }
