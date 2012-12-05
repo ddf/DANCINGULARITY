@@ -40,7 +40,7 @@ void setupControls()
     for( MidiDevice.Info info : infos )
     {
       System.out.println( info.getName() + ", desc[ " + info.getDescription() + " ], vendor[ " + info.getVendor() + " ]" );
-      if ( info.getName().startsWith("nanoKONTROL") )
+      if ( info.getDescription().contains("nanoKONTROL") )
       {
         try
         {

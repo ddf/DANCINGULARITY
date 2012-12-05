@@ -343,8 +343,8 @@ void draw()
     noStroke();
     //stroke( 255 );
     //textureMode( NORMAL );
-    int colums = horizontalDivision;
-    int rows   = verticalDivision;
+    int rows   = horizontalDivision;
+    int colums = verticalDivision;
     float h    = height / rows;
     float w    = width / colums;
     float x    = w/2;
