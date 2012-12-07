@@ -116,7 +116,7 @@ class MIDIReceiver implements Receiver
           
           case GRID_DILATION_CTRL:
           {
-            gridDilation = map( sm.getData2(), 0, 127, -0.9, 0 );
+            gridDilation = map( sm.getData2(), 127, 0, -0.9, 0 );
           }
           break;
           
@@ -244,7 +244,7 @@ void keyPressed()
   if ( key == 'f' ) globalScale += 0.5f;  
   if ( key == 's' ) globalShearX += PI/8;  
   if ( key == 'd' ) globalShearY += PI/8;  
-  if ( key == 'j' ) globalJitter += 4;
+  if ( key == 'v' ) globalJitter += 4;
   
   // camera zoom in
   if ( key == 'a' ) cameraJump -= 100;  
@@ -259,8 +259,8 @@ void keyPressed()
   
   if ( key == 'c' ) cameraShake = 1;
   
-  if ( key == 'v' ) MAT_WIREFRAME = !MAT_WIREFRAME;
-  if ( key == 'b' ) MAT_BOX_MODE  = !MAT_BOX_MODE;
+  if ( key == '\'' ) MAT_WIREFRAME = !MAT_WIREFRAME;
+  if ( key == ';' ) MAT_BOX_MODE  = !MAT_BOX_MODE;
   
   // grid rotations
   if ( key == CODED )
