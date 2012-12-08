@@ -132,7 +132,7 @@ class DanceMat
       {
         mHeat += MAT_BUTTON_HEAT_INCREMENT*2;
         
-        vfxPos.z = 50;
+        vfxPos.z = DanceMat.this.bigBoxHeight*0.55f;
         playVFX( vfxPos );
       }
       else
@@ -295,6 +295,7 @@ class DanceMat
   PVector               pos;
   float                 jitterX;
   float                 jitterY;
+  float                 bigBoxHeight;
   
   ControllButton getButton( String name )
   {
@@ -384,10 +385,10 @@ class DanceMat
         totalHeat    += btn.heat();
         biggestFlash  = max( biggestFlash, btn.flash() );
       }
-      float hite = constrain( map( totalHeat, 0, 9, 0, DANCE_CUBE_SIZE ), 0, DANCE_CUBE_SIZE-35 );
+      bigBoxHeight = constrain( map( totalHeat, 0, 9, 0, DANCE_CUBE_SIZE ), 0, DANCE_CUBE_SIZE-35 );
       surface.noStroke();
       surface.fill( 200 + 55*biggestFlash );
-      surface.box( MAT_BUTTON_MAX_HEIGHT, MAT_BUTTON_MAX_HEIGHT, hite );
+      surface.box( MAT_BUTTON_MAX_HEIGHT, MAT_BUTTON_MAX_HEIGHT, bigBoxHeight );
     }
     else
     {

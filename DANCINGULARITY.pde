@@ -288,6 +288,8 @@ void draw()
     
     drawVFX( offscreen );
     
+    offscreen.setDefaultBlend();
+    
     offscreen.popMatrix();
   }
   offscreen.endDraw();
@@ -452,6 +454,7 @@ void draw()
   // message!
   textFont( messageFont );
   textAlign( CENTER, CENTER );
+  colorMode( RGB );
   if ( MAT_BUILDUP )
   {
     fill( 0 );
